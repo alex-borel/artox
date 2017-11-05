@@ -12,7 +12,7 @@ export default class Upload extends React.Component {
 
   componentWillMount() {
     let url = this.props.url || '../../img/user.jpeg';
-    this.setState({src: url})
+    this.setState({src: url});
   }
 
   handleImageChange(event) {
@@ -40,3 +40,4 @@ export default class Upload extends React.Component {
     )
   }
 }
+

@@ -33,7 +33,6 @@ export default class Modal extends React.Component {
     add(event) {
         event.preventDefault();
         let info = this.state;
-        console.log(info);
         this.props.add(info);
     }
 
@@ -84,3 +83,4 @@ export default class Modal extends React.Component {
         )
     }
 }
+
