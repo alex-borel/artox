@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+}
+
+.icon-box {
+  width: 25px;
+  height: 25px;
+}
+
+.filter {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.filter__input {
+  width: 300px;
+  height: 40px;
+  padding-left: 40px;
+  font-size: 20px;
+  border-color: black;
+  border-radius: 20px;
+  outline: none;
+}
+
+.filter__input:focus {
+  border-color: #29b6f6;
+}
+
+.filter .icon-box {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1050px;
+  margin: 70px auto;
+}
+
+.box {
+  width: 300px;
+  height: 190px;
+  margin-top: 30px;
+  border: 2px solid black;
+}
+
+.user__photo {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.user__info {
+  display: inline-block;
+  margin-top: -10px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+.user__name {
+  margin-bottom: 10px;
+}
+
+.user__tel,
+.user__email {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.box__icons {
+  margin-top: 40px;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.box:hover .box__icons {
+  visibility: visible;
+}
+
+.pencil {
+  margin-left: 10px;
+}
+
+.add {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  margin-top: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.add::after {
+  content: "";
+  position: absolute;
+  top: 95px;
+  left: 120px;
+  width: 50px;
+  height: 4px;
+  background-color: black;
+}
+
+.add::before {
+  content: "";
+  position: absolute;
+  top: 95px;
+  left: 120px;
+  width: 50px;
+  height: 4px;
+  background-color: black;
+  transform: rotate(90deg);
+}
+
+.add:hover {
+  background-color: silver;
+}
+
+.add:hover::after {
+  background-color: #29b6f6;
+}
+
+.add:hover::before {
+  background-color: #29b6f6;
+}
+
+.modal {
+  position: fixed;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 300px;
+  height: 400px;
+  background-color: lightgray;
+  border: 2px solid black;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+  transform: translate(-50%, -50%);
+}
+
+.modal svg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.modal input {
+  display: block;
+  width: 250px;
+  height: 30px;
+  margin: 20px auto;
+  font-size: 16px;
+  line-height: 20px;
+  outline: none;
+}
+
+.modal input[type="text"] {
+  margin-top: 60px;
+}
+
+.modal input:focus {
+  border-color: #29b6f6;
+}
+
+.modal .btn {
+  display: inline-block;
+  width: 70px;
+  margin-top: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.modal .btn__save {
+  margin-left: 115px;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+
+.icon-box:hover {
+  cursor: pointer;
+  fill: #29b6f6;
+}
+
+.img__preview {
+  display: inline-block;
+  margin-left: 22px;
+  vertical-align: top;
+}
+
+.preview__component .btn {
+  width: 260px;
+  margin-top: 10px;
+}
+
+@media (max-width: 740px) {
+  .modal {
+    width: 100vw;
+    height: 100vh;
+  }
+  .preview__component {
+    width: 300px;
+    margin: 50px auto;
+  }
+  .buttons {
+    width: 300px;
+    margin: 20px auto;
+  }
+}
+
+@media (pointer:coarse) {
+  .box__icons {
+    visibility: visible;
+  }
+}
+
